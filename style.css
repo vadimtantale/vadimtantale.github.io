@@ -1,0 +1,347 @@
+@font-face {
+	font-family: 'TT Lakes';
+	src: url('fonts/TTLakes-Regular.eot');
+	src: url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+	url('fonts/TTLakes-Regular.woff') format('woff'),
+	url('fonts/TTLakes-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: 'TT Lakes';
+	src: url('fonts/TTLakes-Medium.eot');
+	src: url('fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+	url('fonts/TTLakes-Medium.woff') format('woff'),
+	url('fonts/TTLakes-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: 'TT Lakes';
+	src: url('fonts/TTLakes-Bold.eot');
+	src: url('fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+	url('fonts/TTLakes-Bold.woff') format('woff'),
+	url('fonts/TTLakes-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	}
+
+
+
+body {
+	position: relative;
+	margin: 0;
+	font-family: 'TT Lakes', sans-serif;
+}
+
+.header {
+	height: 88px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.wrapper {
+	display: flex;	
+	margin: 0;
+	padding: 0;
+	align-items: center;
+	list-style: none;
+}
+
+.wrapper--burger {
+	margin-left: 8px;
+	flex-grow: 1;
+	justify-content: flex-start;
+}
+
+
+.wrapper--call {
+	display: none;
+}
+
+.wrapper--repair {
+	margin-right: 8px;
+}
+
+.wrapper__item {
+	margin: 8px;
+}
+
+.wrapper--repair::before {
+	content: '';
+	display: block;
+	width: 2px;
+	height: 32px;
+	background: #EAEAEA;
+	transform: translateX(-10px);
+}
+
+.button {
+	width: 40px;
+	height: 40px;
+	border: none;
+	background-color: #fff;
+}
+
+.button--burger {
+	background-image: url('icons/burger.svg');
+}
+
+.button--call {
+	background-image: url('icons/call.svg');
+}
+
+.button--chat {
+	background-image: url('icons/chat.svg');
+}
+
+.button--profile {
+	background-image: url('icons/profile.svg');
+}
+
+.button--repair {
+	background-image: url('icons/repair.svg');
+}
+
+.button--checkstatus {
+	background-image: url('icons/checkstatus.svg');
+}
+
+.main {
+	padding: 24px 0 0 0;
+	background-color: #f8f8f8;
+}
+
+.h1 {
+	display: flex;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 40px;
+	margin-top: 0;
+}
+
+.h1::before {
+	content: '';
+	display: block;
+	width: 4px;
+	height: 40px;
+	background: #41f6d7;
+	border-radius: 0 4px 4px 0;
+	margin-right: 12px;
+}
+
+.wrapper--menu {	
+	overflow-x: auto;
+	margin-left: 16px;
+}
+
+.main__item {
+	justify-content: center;
+	height: 40px;
+	white-space: nowrap;
+	padding: 0 16px;
+}
+
+.main__item:focus, .main__item:hover {
+	border-radius: 6px;
+	background: #FFFFFF;
+	border: 2px solid #B8FFEC;
+}
+
+.main__content {
+	flex-direction: column;
+	align-items: stretch;	
+}
+
+.wrapper--content {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.main__descr {
+	width: 288px;
+	min-height: 90px;
+	font-size: 14px;
+	margin-left: 16px;
+	padding-top: 32px;
+}
+
+.main__text {
+	margin: 0;
+}
+
+.main__text--768 {
+	display: none;
+}
+
+.main__text--1120 {
+	display: none;
+}
+
+.main__link {
+	display: block;
+	margin-left: 36px;
+	padding-top: 16px;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	color:#1B1C21;
+}
+
+.main__link::before {
+	content: '';
+	display: inline-block;
+	width: 8px;
+	height: 11px;
+	transform: translateX(-12px);
+	background-image: url('icons/read_more.svg');
+}
+
+.main__picture {
+	min-height: 230px;
+	min-width: 320px;
+	background: url('img/CPS_320.jpg') no-repeat;
+	background-position: 0 30%;
+}
+
+
+
+/* 768px */
+
+ 
+@media (min-width: 767px) {
+
+	.wrapper--burger {
+		margin-left: 16px;
+	}
+
+	.wrapper--call {
+		display: flex;
+		margin-right: 20px;
+	}
+
+	.h1 {
+		margin-left: 8px;
+	}
+
+	.h1::before {		
+		transform: translateX(-8px);
+	}
+
+	.main__content {
+		flex-direction: row;
+		padding-top: 32px;
+	}
+
+	.wrapper--menu {
+		margin-left: 24px;
+	}
+
+	.main__descr {
+		margin-left: 24px;		
+		padding: 0;
+		width: 312px;
+	}
+
+	.main__text--768 {
+		display: block;
+		padding: 0;
+		margin-top: 1.5em;
+	}
+
+	.main__link {
+		margin-left: 44px;
+		padding-top: 10px;
+	}
+
+	.main__picture {
+		min-height: 208px;
+		min-width: 360px;
+		margin-left: 24px;
+		border-radius: 5px;
+		background-position: 0 60%;
+		background-size: 100%;
+	}
+}
+
+
+/* 1120px */
+
+
+@media (min-width: 1119px) {
+
+	.header {
+		position: absolute;
+
+		/* -moz-appearance: none;
+		-webkit-appearance: none;
+		appearance: none; */
+	}
+
+	.wrapper--burger, .wrapper--call {
+		display: none;
+	}
+
+	.wrapper--repair {
+		position: absolute;
+		left: 770px;
+		top: 15px;
+	}
+
+	.wrapper--repair::before {
+		display: none;
+	}
+
+	.wrapper__item {
+		display: block;
+		margin-left: 72px;
+	}
+
+	.wrapper__item:first-of-type::before {
+		content: 'Оставить заявку';
+		white-space: nowrap;
+		display: block;
+		transform: translate(-133px, 31px);
+	}
+
+	.wrapper__item:last-of-type::before {
+		content: 'Статус ремонта';
+		white-space: nowrap;
+		display: block;
+		transform: translate(-133px, 31px);
+	}
+
+	.main {
+		padding-top: 42px;
+	}
+
+	.wrapper--menu {
+		overflow-x: hidden;
+		flex-wrap: wrap;
+	}
+
+	.main__item {
+		padding: 0 22px;
+	}
+	
+	.main__descr {
+		width: 490px;
+		padding-top: 1em;
+	}
+
+	.main__text--1120 {
+		display: inline;
+	}
+
+	.main__picture {		
+		min-height: 326px;
+		min-width: 531px;
+		margin-left: 36px;
+		border-radius: 6px;
+		background-position: top;
+	}
+
+}

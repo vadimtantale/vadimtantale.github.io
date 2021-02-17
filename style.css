@@ -340,7 +340,7 @@ body {
 		content: 'Оставить заявку';
 		white-space: nowrap;
 		display: block;
-		transform: translate(-133px, 31px);
+		transform: translate(-122px, 31px);
 	}
 
 	.order__item:last-of-type::before {

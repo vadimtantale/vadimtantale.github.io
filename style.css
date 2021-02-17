@@ -273,6 +273,10 @@ body {
 		margin-left: 24px;
 	}
 
+	.main__items {
+		flex-wrap: wrap;
+	}
+
 	.main__content {
 		flex-direction: row;
 		padding: 20px 0;
@@ -291,7 +295,6 @@ body {
 	.main__picture {
 		margin: 0 24px;
 		width: 50%;
-		
 		border-radius: 5px;
 	}
 
@@ -319,13 +322,13 @@ body {
 		display: none;
 	}
 
-	.upper-button--checkstatus {
-		margin-right: 32px;
+	.upper-button--repair {
+		margin-right: 148px;
 	}
 
 	.order {
 		position: absolute;
-		left: 840px;
+		left: 842px;
 		top: 4px;
 	}
 
@@ -342,13 +345,16 @@ body {
 
 	.order__item:last-of-type::before {
 		content: 'Статус ремонта';
+		width: 119px;
+		height: 24px;
 		white-space: nowrap;
 		display: block;
-		transform: translate(-44px, 31px);
+		transform: translate(-118px, 31px);
 	}
 
 	.main {
 		padding-top: 42px;
+		height: 535px;
 	}
 
 	.main__items {

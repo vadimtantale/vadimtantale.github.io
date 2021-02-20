@@ -45,6 +45,7 @@ body {
 	min-height: 535px;
 	background: #000;
 	position: relative;
+	margin: 0 auto;
 }
 
 .header {

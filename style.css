@@ -40,8 +40,11 @@ body {
 }
 
 .wrapper {
-	width: 100vw;
+	max-width: 1120px;
+	min-width: 320px;
 	min-height: 535px;
+	background: #000;
+	position: relative;
 }
 
 .header {
@@ -50,6 +53,7 @@ body {
 	display: flex;
 	align-items: center;
 	padding: 0 8px;
+	background: #fff;
 }
 
 .upper-button {
@@ -69,6 +73,12 @@ body {
 	margin: 0 8px;
 	height: 51px;
 	margin: 0 8px;
+}
+
+.logo__link {
+	display: block;
+	width: 98px;
+	height: 52px;
 }
 
 .support {
@@ -114,12 +124,13 @@ body {
 	background-image: url('icons/checkstatus.svg');
 }
 
-.main {
+.about {
 	padding: 24px 0 0 0;
 	background-color: #f8f8f8;
+
 }
 
-.main__h1 {
+.about__h1 {
 	display: flex;
 	font-weight: bold;
 	font-size: 28px;
@@ -127,7 +138,7 @@ body {
 	margin-top: 0;
 }
 
-.main__h1::before {
+.about__h1::before {
 	content: '';
 	display: block;
 	width: 4px;
@@ -138,19 +149,23 @@ body {
 }
 
 
-.main__nav {
+.about__nav {
 	margin-left: 16px;
 	position: relative;
 }
 
-.main__items {
+.about__items {
 	display: flex;
-	overflow: auto;
+	overflow: scroll;
 	list-style: none;
 	padding: 0;
 }
 
-.main__nav-link {
+.about__items::-webkit-scrollbar {
+	display:none;
+}
+
+.about__nav-link {
 	display: block;
 	align-items: center;
 	white-space: nowrap;
@@ -162,47 +177,48 @@ body {
 	border: 2px solid rgba(0, 0, 0, .0);
 }
 
-.main__nav-link:focus, .main__nav-link:hover {
+.about__nav-link:focus, .about__nav-link:hover {
 	border-radius: 6px;
 	background: #FFFFFF;
 	border: 2px solid #B8FFEC;
 }
 
 
-/* .main__nav::after {
+.about__nav::after {
 	content: '';
-	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
 	width: 24px;
 	height: 40px;
 	background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-	transform: translate(280px, -56px);
-} */
+}
 
-.main__content {
+.about__content {
 	display: flex;
 	flex-direction: column;
 }
 
-.main__descr {
+.about__descr {
 	width: 95%;
 	min-height: 90px;
 	font-size: 14px;
 	margin: 0 16px;
 }
 
-.main__text {
+.about__text {
 	margin: 0;
 }
 
-.main__text--768 {
+.about__text--768 {
 	display: none;
 }
 
-.main__text--1120 {
+.about__text--1120 {
 	display: none;
 }
 
-.main__descr-link {
+.about__descr-link {
 	display: block;
 	margin-left: 20px;
 	padding-top: 16px;
@@ -213,7 +229,7 @@ body {
 	color:#1B1C21;
 }
 
-.main__descr-link::before {
+.about__descr-link::before {
 	content: '';
 	display: inline-block;
 	width: 8px;
@@ -222,11 +238,11 @@ body {
 	background-image: url('icons/read_more.svg');
 }
 
-.main__picture {
+.about__picture {
 	display: block;
-	margin: 0 auto;
 	margin-top: 1em;
 	max-width: 100%;
+	object-fit: cover;
 }
 
 
@@ -265,34 +281,30 @@ body {
 		margin-left: 10px;
 	}
 
-	.main__h1::before {
+	.about__h1::before {
 		margin-right: 20px;
 	}
 
-	.main__nav {
+	.about__nav {
 		margin-left: 24px;
 	}
 
-	.main__items {
-		flex-wrap: wrap;
-	}
-
-	.main__content {
+	.about__content {
 		flex-direction: row;
 		padding: 20px 0;
 	}
 
-	.main__descr {
+	.about__descr {
 		margin: 0 24px;
 		width: 50%;
 	}
 
-	.main__text--768 {
+	.about__text--768 {
 		display: block;
 		margin-top: 1.5em;
 	}
 
-	.main__picture {
+	.about__picture {
 		margin: 0 24px;
 		width: 50%;
 		border-radius: 5px;
@@ -304,10 +316,7 @@ body {
 
 	.header {
 		position: absolute;
-
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		appearance: none;
+		top: -88px;
 	}
 
 	.burger {
@@ -329,7 +338,7 @@ body {
 	.order {
 		position: absolute;
 		left: 842px;
-		top: 4px;
+		top: 92px;
 	}
 
 	.order::before {
@@ -338,6 +347,7 @@ body {
 
 	.order__item:first-of-type::before {
 		content: 'Оставить заявку';
+		font-weight: 500;
 		white-space: nowrap;
 		display: block;
 		transform: translate(-122px, 31px);
@@ -345,6 +355,7 @@ body {
 
 	.order__item:last-of-type::before {
 		content: 'Статус ремонта';
+		font-weight: 500;
 		width: 119px;
 		height: 24px;
 		white-space: nowrap;
@@ -352,20 +363,28 @@ body {
 		transform: translate(-118px, 31px);
 	}
 
-	.main {
+	.about {
 		padding-top: 42px;
 		height: 535px;
 	}
 
-	.main__items {
+	.about__items {
 		flex-wrap: wrap;
 	}
 
-	.main__descr {
+	.about__nav-link {
+		font-weight: 500;
+	}
+	
+	.about__nav::after {
+		display: none;
+	}
+
+	.about__descr {
 		margin-top: 1em;
 	}
 
-	.main__picture {
+	.about__picture {
 		width: 532px;
 		margin-right: 29px;
 		border-radius: 6px;

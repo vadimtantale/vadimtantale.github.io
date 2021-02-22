@@ -1,0 +1,14 @@
+@import 'fonts.css';
+@import 'block1.3.css';
+
+
+body {	
+	font-family: 'TT Lakes', sans-serif;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+

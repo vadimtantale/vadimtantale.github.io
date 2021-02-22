@@ -315,7 +315,7 @@
 		content: 'Оставить заявку';
 		font-weight: 500;
 		white-space: nowrap;
-		display: block;
+		display: inline-block;
 		transform: translate(-122px, 31px);
 	}
 

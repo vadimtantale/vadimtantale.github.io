@@ -10,7 +10,7 @@ body {
 	box-sizing: inherit;
 }
 
-.wrapper--sidebar {
+.sidebar {
 	width: 320px;
 	height: 100%;
 	background: #000;
@@ -28,7 +28,7 @@ body {
 	background: #fff;
 }
 
-.header--sidebar {
+.sidebar__header {
 	padding: 0 16px;
 }
 
@@ -143,6 +143,12 @@ body {
 .upper-button--profile {
 	background-image: url('icons/profile.svg');
 	margin: 0 8px;
+}
+
+.contacts {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .email {

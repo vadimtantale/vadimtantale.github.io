@@ -7,13 +7,14 @@ function mobileSlider() {
 		swiper = new Swiper(slider, {
 			slidesPerView: 'auto',
 			spaceBetween: 16,
+			slideToClickedSlide: true,
+				// setWrapperSize: true,
 			slidesOffsetBefore: 16,
 			slidesOffsetAfter: 16,
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
 				clickable: true,
-				slideToClickedSlide: true,
 			},
 		});
 	

@@ -1,4 +1,4 @@
-@import 'fonts.css';
+@import '../fonts.css';
 
 
 body {	
@@ -29,19 +29,13 @@ body {
 
 
 /* Далее блок со слайдером */
-
-
 .swiper-container {
 	height: 140px;
 }
 
-.brands__content {
-	padding: 16px 16px 0 0;
-}
-
 .brands__items {
 	margin: 0;
-	padding: 0;
+	padding: 16px 16px 0 0;
 	list-style: none;
 }
 
@@ -50,11 +44,10 @@ body {
 	align-items: center;
 	padding: 0 16px;
 	height: 72px;
-	width: 240px;
+	width: 208px;
 	background: #FFFFFF;
 	border: 1px solid #EAEAEA;
 	border-radius: 6px;
-	box-sizing: border-box;
 }
 
 .brands__link-logo {
@@ -62,7 +55,6 @@ body {
 }
 
 .arrow {
-	display: flex;
 	align-items: center;
 	width: 40px;
 	height: 40px;
@@ -73,9 +65,9 @@ body {
 .arrow__part {
 	border: solid #FF3E79;
   border-width: 0 2px 2px 0;
-  display: block;
-  padding: 4px;
-	transform: translateX(11px) rotate(-45deg);
+  display: inline-block;
+  padding: 3.5px;
+	transform: translate(15px, 10px) rotate(-45deg);
 }
 
 .brands__content::after {
@@ -87,12 +79,11 @@ body {
 	width: 24px;
 	height: 81px;
 	background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-	/* background: #000; */
 	z-index: 11;
 }
 
-/* настройки отображения Pagination */
 
+/* настройки отображения Pagination */
 .swiper-pagination-bullet {
 	width: 12px;
 	height: 12px;
@@ -109,8 +100,8 @@ body {
 	display: none;
 }
 
-/* Отображение для 768px */
 
+/* Отображение для 768px */
 @media (min-width: 768px) {
 	.brands__header {
 		padding-left: 24px;
@@ -182,6 +173,8 @@ body {
 	}
 }
 
+
+/* Отображение для 1120px */
 @media (min-width: 1120px) {
 	.brands__header {
 		padding-left: 32px;
@@ -194,7 +187,6 @@ body {
 	.brands__item {
 		width: 240px;
 		margin-right: 32px;
-		transition: width 0.5s ease;
 	}
 
 }

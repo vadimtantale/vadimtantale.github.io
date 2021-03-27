@@ -1,0 +1,86 @@
+.main-page {
+	padding: 24px 0 0 0;
+	&__h1 {
+		display: flex;
+		font-weight: bold;
+		font-size: 28px;
+		line-height: 40px;
+		margin-top: 0;
+		&::before {
+			content: '';
+			width: 4px;
+			height: 40px;
+			background: $pseudo-second;
+			border-radius: 0 4px 4px 0;
+			margin-right: 12px;
+		}
+	}
+	&__nav {
+		margin-left: 16px;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 24px;
+			height: 40px;
+			background: linear-gradient(270deg, $main 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+		}		
+	}
+	&__items {
+		display: flex;
+		overflow: scroll;
+		list-style: none;
+		padding: 0;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display:none;
+		}
+	}
+	&__nav-link {
+		display: block;
+		align-items: center;
+		white-space: nowrap;
+		padding: 8px 16px;
+		height: 40px;
+		text-decoration: none;
+		font-size: 16px;
+		color: $text-second;
+		border: 2px solid rgba(0, 0, 0, .0);
+		font-weight: 500;
+		&:hover {
+			border-radius: 6px;
+			background: $back;
+			border: 2px solid $main-border;
+		}
+	}
+}
+
+
+@media (min-width: $tablet) {
+	.main-page {
+		&__h1 {
+			&::before {
+				margin-right: 20px;
+			}
+		}
+		&__nav {
+			margin-left: 24px;
+		}
+	}
+}
+
+
+@media (min-width: $desktop) {
+	.main-page {
+		padding-top: 42px;
+		min-height: 535px;
+		&__items {
+			flex-wrap: wrap;
+		}
+		&__nav::after {
+			display: none;
+		}
+	}
+}

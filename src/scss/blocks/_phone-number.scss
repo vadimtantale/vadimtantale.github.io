@@ -1,0 +1,12 @@
+.phone-number {
+	display: block;
+	text-decoration: none;
+	color: $text-main;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 32px;
+	&:focus,
+	&:hover {
+		@include transition;
+	}
+}

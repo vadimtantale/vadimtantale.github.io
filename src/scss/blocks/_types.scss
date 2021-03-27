@@ -1,0 +1,47 @@
+.types {
+	&__swiper {
+		&::after {
+			@include swiper-pseudo;
+			height: 166px;
+		}
+	}
+	&__item {
+		align-items: flex-end;
+	}
+	&__link {
+		align-self: flex-start;
+		text-decoration: none;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		color: $text-main;
+		font-weight: 500;
+	}
+	&__button {
+		display: none;
+	}
+}
+
+
+@media (min-width: $tablet) {
+	.types {
+		&__items {
+			height: 176px;
+			&--visible {
+				height: auto;
+			}
+		}
+		&__button {
+			display: inline-block;
+			margin: 8px 0 32px 48px;
+		}
+	}
+}
+
+
+@media (min-width: $desktop) {
+	.types {
+		&__button {
+			margin: 8px 0 50px 56px;
+		}
+	}
+}

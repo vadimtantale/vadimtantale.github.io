@@ -1,0 +1,30 @@
+.brands {
+	&__button {
+		display: none;
+	}
+}
+
+
+@media (min-width: $tablet) {
+	.brands {
+		&__items {
+			height: 176px;
+			&--visible {
+				height: auto;
+			}
+		}
+		&__button {
+			display: inline-block;
+			margin: 8px 0 32px 48px;
+		}
+	}
+}
+
+
+@media (min-width: $desktop) {
+	.brands {
+		&__button {
+			margin: 8px 0 50px 56px;
+		}
+	}
+}

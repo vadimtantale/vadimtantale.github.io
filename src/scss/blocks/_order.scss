@@ -1,0 +1,37 @@
+.order {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	&__item {
+		&:first-of-type {
+			margin-right: 8px;
+		}
+		&:last-of-type {
+			margin-left: 8px;
+		}
+	}
+}
+
+@media (min-width: $wide-desktop) {
+	.order{
+		&__item {
+			position: relative;
+			&::before {
+				position: absolute;
+			}
+			&:first-of-type {
+				margin-right: 152px;
+				&::before {
+					content: 'Оставить заявку';
+					width: 128px;
+					transform: translate(-136px, 10px);
+				}
+			}
+			&:last-of-type::before {
+				content: 'Статус ремонта';
+				width: 121px;
+				transform: translate(-130px, 10px);
+			}
+		}
+	}
+}

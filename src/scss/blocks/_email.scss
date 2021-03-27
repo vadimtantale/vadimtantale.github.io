@@ -1,0 +1,11 @@
+.email {
+	display: block;
+	text-decoration: none;
+	color: $text-main;
+	font-weight: 500;
+	line-height: 24px;
+	&:hover,
+	&:focus {
+		@include transition;
+	}
+}

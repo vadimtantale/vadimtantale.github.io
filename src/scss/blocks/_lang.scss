@@ -1,0 +1,27 @@
+.lang {
+	display: flex;
+	justify-content: space-between;
+	width: 87px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	&__link {
+		color: $text-main;
+		width: 25px;
+		height: 25px;
+		text-decoration: none;
+		font-weight: 500;
+		&:focus,
+		&:hover {
+			transition: 1s ease;
+			color: #7E7E82;
+			font-size: larger;
+		}
+		&--active {
+			color:$text-second;
+		}
+	}
+	&:not(:last-of-type) {
+		margin-right: 7px;
+	}
+}

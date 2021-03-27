@@ -1,0 +1,9 @@
+.support {
+	list-style: none;
+	&__item:first-of-type {
+		margin-right: 16px;
+	}
+	&__item:last-of-type {
+		margin-left: 16px;
+	}
+}

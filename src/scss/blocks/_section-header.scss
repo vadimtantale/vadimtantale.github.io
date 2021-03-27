@@ -1,0 +1,28 @@
+.section-header {
+	padding: 16px;
+	background: linear-gradient(to right, #F2F2F2, $back);
+	&__title {
+		margin: 0;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		text-transform: uppercase;
+		color: $text-second;
+		font-weight: normal;
+	}
+}
+
+
+@media (min-width: $tablet) {
+	.section-header {
+		padding-left: 24px;
+		height: 56px;
+	}
+}
+
+
+@media (min-width: $desktop) {
+	.section-header {
+		padding-left: 32px;
+	}
+}

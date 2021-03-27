@@ -1,0 +1,33 @@
+@mixin transition {
+	transition: 1s ease;
+	color: $text-second;
+	letter-spacing: 0.4px;
+	padding: auto;
+}
+
+@mixin slide-border {
+	box-shadow: 0 0 4px #000, inset 0 0 4px #000;
+	transition: box-shadow 1s ease;
+	border-color: #EAEAEA;
+	border-radius: 4px;
+	background: $main;
+}
+
+@mixin brands-button {
+	content: '';
+	position: absolute;
+	transform: translate(-24px, 4px);
+	width: 8px;
+	height: 11px;
+}
+
+@mixin swiper-pseudo {
+	content:'';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(calc(-50% - 13px));
+	width: 24px;
+	background: linear-gradient(270deg, $main 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+	z-index: 11;
+}

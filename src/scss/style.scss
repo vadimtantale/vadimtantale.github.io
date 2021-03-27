@@ -1,0 +1,44 @@
+@import 'libs/normalize';
+@import 'libs/fonts';
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/animation';
+
+
+body {	
+	font-family: 'TT Lakes', sans-serif;
+	font-weight: 500;
+	margin: 0;
+	box-sizing: border-box;
+	background: $back;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+@import 'blocks/wrapper';
+@import 'blocks/buttons';
+@import 'blocks/logo';
+@import 'blocks/header';
+@import 'blocks/support';
+@import 'blocks/order';
+@import 'blocks/main-page';
+@import 'blocks/about';
+@import 'blocks/lang';
+@import 'blocks/sidebar';
+@import 'blocks/contacts';
+@import 'blocks/email';
+@import 'blocks/phone-number';
+@import 'blocks/section-header';
+@import 'blocks/swiper';
+@import 'blocks/brands';
+@import 'blocks/types';
+@import 'blocks/prices';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/title';
+@import 'blocks/feedback';
+@import 'blocks/order-call';

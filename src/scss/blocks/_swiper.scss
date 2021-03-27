@@ -1,0 +1,83 @@
+.swiper {
+	&::after {
+		@include swiper-pseudo;
+		height: 81px;
+	}
+	&__items {
+		margin: 0;
+		padding: 16px 16px 0 0;
+		list-style: none;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: 16px;
+		height: 38px;
+		width: 206px;
+		background: $back;
+		border: 1px solid $pseudo;
+		border-radius: 6px;
+		&:focus,
+		&:hover {
+			box-shadow: 0 0 4px #000, inset 0 0 4px #000;
+			transition: box-shadow 1s ease;
+		}
+		&--types {
+			height: 128px;
+		}
+	}
+	&__link {
+		flex-grow: 1;
+	}
+	&-pagination {
+		position: static;
+		margin-top: 16px;
+	}
+	&-pagination-bullet {
+		width: 12px;
+		height: 12px;
+		margin: 0 6px !important;
+		opacity: 1;
+		background: #DDDDDD;
+	}
+	&-pagination-bullet-active {
+		background: #B5B6BC;;
+	}
+}
+
+
+@media (min-width: $tablet) {
+	.swiper {
+		padding: 24px 0 0 24px;
+		&::after {
+			display: none;
+		}
+		&__items {
+			flex-wrap: wrap;
+			padding: 0;
+		}
+		&__item {
+			width: 190px;
+			margin-bottom: 16px;
+			margin-right: 24px;
+			transition: 0.5s ease;
+			&:last-of-type {
+				margin-right: auto;
+			}
+		}
+		&-pagination {
+			display: none;
+		}
+	}
+}
+
+
+@media (min-width: $desktop) {
+	.swiper {
+		padding: 32px 0 0 32px;
+		&__item {
+			width: 206px;
+			margin-right: 32px;
+		}
+	}
+}

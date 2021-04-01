@@ -2,11 +2,11 @@ import Swiper, { Pagination } from 'swiper';
 Swiper.use(Pagination);
 
 let slider = document.querySelector('.swiper-container');
-
+let swiper;
 
 function mobileSlider() {
 	if (window.innerWidth < 768) {
-		swiper = new Swiper('.swiper-container', {
+			swiper = new Swiper('.swiper-container', {
 			slidesPerView: 'auto',
 			spaceBetween: 16,
 			slideToClickedSlide: true,
@@ -31,6 +31,7 @@ function mobileSlider() {
 	}
 }
 
+mobileSlider();
 
 window.addEventListener('resize', function() {
 	mobileSlider();

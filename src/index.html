@@ -7,11 +7,11 @@
 	<meta name="keywords" content="Dell, ремонт Dell, сервисный центр">
 	<meta name="description" content="Авторизованный сервисный центр по ремонту техники Dell">	
 	<title>CPS</title>
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 </head>
 <body>
-	<div class="wrapper">
-		<aside class="sidebar">
+	<div class="wrapper" data-action="wrapper">
+		<aside class="sidebar" data-name="sidebar">
 			<header class="sidebar__header">
 				<button class="sidebar__button button button--close" data-action="close"></button>
 				<a href="#" class="sidebar__logo logo"><img class="logo__picture" src="img/logo.svg" alt="Логотип CPS"></a>
@@ -46,8 +46,8 @@
 				</ul>
 			</footer>
 		</aside>
-		<aside class="modal feedback">
-			<button class="button button--close modal__button" data-action="close"></button>
+		<aside class="modal feedback" data-name="feedback">
+			<button class="button modal__button button--close" data-action="close"></button>
 			<h3 class="title modal__title">Обратная связь</h3>
 			<form action="#" class="modal__form">
 				<input name="name" required placeholder="Имя" type="text" class="modal__item">
@@ -59,8 +59,8 @@
 				<button class="button button--order modal__button--order">ОТПРАВИТЬ<span class="button__part button__part--white"></span></button>
 			</form>
 		</aside>
-		<aside class="modal order-call">
-			<button class="button button--close modal__button"  data-action="close"></button>
+		<aside class="modal order-call" data-name="order-call">
+			<button class="button modal__button button--close" data-action="close"></button>
 			<h3 class="title modal__title">Заказать звонок</h3>
 			<form action="#" class="modal__form">
 				<input name="tel" required placeholder="Телефон" type="t" class="modal__item">

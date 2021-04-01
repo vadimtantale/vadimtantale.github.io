@@ -4,12 +4,16 @@
 	right: 0;
 	transform: translateX(125%);
 	transition: transform 1s ease;
-	// z-index: -1;
 	z-index: 3;
 	width: 320px;
 	height: 100vh;
 	padding: 24px 16px 16px 16px;
 	background: $back;
+	overflow: auto;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display:none;
+	}
 	&__button {
 		margin-bottom: 40px;
 		&--order {
@@ -32,6 +36,7 @@
 	&__form {
 		display: flex;
 		flex-direction: column;
+		overflow: auto;
 	}
 	&__item {
 		height: 48px;
@@ -68,7 +73,7 @@
 	.modal {
 		padding: 40px 32px;
 		width: 440px;
-		box-shadow: 0 0 16px rgba(14, 24, 80, 0.2);
+		overflow: visible;
 		&__button {
 			position: absolute;
 			top: 32px;

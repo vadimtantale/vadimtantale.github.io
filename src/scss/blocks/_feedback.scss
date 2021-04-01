@@ -1,8 +1,8 @@
 .feedback {
 	&--active {
-		// z-index: 3;
 		position: fixed;
 		transform: translateX(0);
 		transition: transform 1s ease;
+		box-shadow: 0 0 16px rgba(14, 24, 80, 0.2);
 	}
 }

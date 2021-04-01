@@ -17,6 +17,7 @@
 	&--active {
 		position: fixed;
 		transform: translateX(0);
+		box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
 	}
 	&__header {
 		display: flex;
@@ -97,9 +98,6 @@
 	.sidebar {
 		width: 320px;
 		padding: 24px 24px 32px 24px;
-		&--active {
-			box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
-		}
 		&__nav {
 			min-height: 434px;
 			flex-grow: 1;
@@ -119,6 +117,7 @@
 		position: relative;
 		transform: translateX(0);
 		box-shadow: none;
+		z-index: 2;
 		&__button {
 			display: none;
 		}

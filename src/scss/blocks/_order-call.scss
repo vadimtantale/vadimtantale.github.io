@@ -1,6 +1,5 @@
 .order-call {
 	&--active {
-		z-index: 3;
 		position: fixed;
 		transform: translateX(0);
 		transition: transform 1s ease;

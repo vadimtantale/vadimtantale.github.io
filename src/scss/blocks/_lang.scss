@@ -13,9 +13,7 @@
 		font-weight: 500;
 		&:focus,
 		&:hover {
-			transition: 1s ease;
-			color: #7E7E82;
-			font-size: larger;
+			color: $button;
 		}
 		&--active {
 			color:$text-second;

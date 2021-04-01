@@ -356,13 +356,16 @@ body {
   display: flex;
   overflow: hidden; }
   .wrapper--disactive {
-    position: fixed; }
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%); }
     .wrapper--disactive::before {
       content: '';
       width: 100%;
       height: 100%;
-      position: fixed;
+      position: absolute;
       background: #FFFFFF;
+      transition: all 1s ease;
       opacity: 0.96;
       z-index: 3;
       overflow: hidden; }
@@ -697,9 +700,7 @@ body {
     text-decoration: none;
     font-weight: 500; }
     .lang__link:focus, .lang__link:hover {
-      transition: 1s ease;
-      color: #7E7E82;
-      font-size: larger; }
+      color: #FF3E79; }
     .lang__link--active {
       color: #7E7E82; }
   .lang:not(:last-of-type) {
@@ -722,7 +723,8 @@ body {
     display: none; }
   .sidebar--active {
     position: fixed;
-    transform: translateX(0); }
+    transform: translateX(0);
+    box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2); }
   .sidebar__header {
     display: flex;
     align-items: center;
@@ -783,8 +785,6 @@ body {
   .sidebar {
     width: 320px;
     padding: 24px 24px 32px 24px; }
-    .sidebar--active {
-      box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2); }
     .sidebar__nav {
       min-height: 434px;
       flex-grow: 1; }
@@ -797,7 +797,8 @@ body {
   .sidebar {
     position: relative;
     transform: translateX(0);
-    box-shadow: none; }
+    box-shadow: none;
+    z-index: 2; }
     .sidebar__button {
       display: none; } }
 
@@ -1170,7 +1171,11 @@ body {
   width: 320px;
   height: 100vh;
   padding: 24px 16px 16px 16px;
-  background: #FFFFFF; }
+  background: #FFFFFF;
+  overflow: auto;
+  scrollbar-width: none; }
+  .modal::-webkit-scrollbar {
+    display: none; }
   .modal__button {
     margin-bottom: 40px; }
     .modal__button--order {
@@ -1187,7 +1192,8 @@ body {
     left: 0; }
   .modal__form {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    overflow: auto; }
   .modal__item {
     height: 48px;
     background: #FFFFFF;
@@ -1217,7 +1223,7 @@ body {
   .modal {
     padding: 40px 32px;
     width: 440px;
-    box-shadow: 0 0 16px rgba(14, 24, 80, 0.2); }
+    overflow: visible; }
     .modal__button {
       position: absolute;
       top: 32px;
@@ -1240,10 +1246,10 @@ body {
 .feedback--active {
   position: fixed;
   transform: translateX(0);
-  transition: transform 1s ease; }
+  transition: transform 1s ease;
+  box-shadow: 0 0 16px rgba(14, 24, 80, 0.2); }
 
 .order-call--active {
-  z-index: 3;
   position: fixed;
   transform: translateX(0);
   transition: transform 1s ease; }

@@ -115,6 +115,7 @@
 @media (min-width: $wide-desktop) {
 	.sidebar {
 		position: static;
+		z-index: 0;
 		transform: translateX(0);
 		box-shadow: none;
 		&__button {

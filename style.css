@@ -795,10 +795,9 @@ body {
 
 @media (min-width: 1440px) {
   .sidebar {
-    position: relative;
+    position: static;
     transform: translateX(0);
-    box-shadow: none;
-    z-index: 2; }
+    box-shadow: none; }
     .sidebar__button {
       display: none; } }
 

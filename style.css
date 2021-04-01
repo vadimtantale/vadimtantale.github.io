@@ -796,6 +796,7 @@ body {
 @media (min-width: 1440px) {
   .sidebar {
     position: static;
+    z-index: 0;
     transform: translateX(0);
     box-shadow: none; }
     .sidebar__button {

@@ -3,11 +3,9 @@ const modals = document.querySelectorAll('[data-name]');
 
 document.addEventListener('click', (event) => {
 	const action = event.target.getAttribute('data-action');
-	console.log(action);
 	
-	if (action !== 'close') {
+	if (action && action !== 'close') {
 		const modal = document.querySelector(`.${action}`);
-		console.log(modal);
 		const sidebarActive = document.querySelector('.sidebar--active');
 	
 		if (sidebarActive) {
@@ -19,7 +17,6 @@ document.addEventListener('click', (event) => {
 	}
 
 	if (action === 'close') {
-		console.log(event.target.parentElement);
 		wrapper.classList.remove('wrapper--disactive');
 		deleteActiveClass(modals);
 	}

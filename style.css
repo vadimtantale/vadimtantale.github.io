@@ -406,13 +406,14 @@ body {
     letter-spacing: -0.15px;
     padding-left: 12px; }
   .button--show-all {
-    min-width: 115px;
+    min-width: 140px;
     height: auto;
     border-radius: 0;
     background: none;
     font-size: 16px;
     letter-spacing: -0.2px;
     padding: 0.5em;
+    padding-left: 33px;
     text-align: left; }
     .button--show-all:focus, .button--show-all:hover {
       box-shadow: 0 0 4px #000, inset 0 0 4px #000;
@@ -427,7 +428,7 @@ body {
       width: 8px;
       height: 11px;
       background: url(./static/down-arrows.svg); }
-    .button--show-all--active:before {
+    .button--show-all--active::before {
       content: '';
       position: absolute;
       transform: translate(-24px, 4px);
@@ -658,7 +659,7 @@ body {
       height: auto; }
   .about__button {
     display: block;
-    margin: 0.5em 0 34px 33px; }
+    margin: 0.5em 0 34px 0; }
   .about__picture {
     display: block;
     margin-top: 1em;
@@ -717,7 +718,7 @@ body {
   transition: transform 1s ease;
   z-index: 4;
   padding: 18px 16px 24px 16px;
-  overflow: auto;
+  overflow: scroll;
   scrollbar-width: none; }
   .sidebar::-webkit-scrollbar {
     display: none; }
@@ -941,11 +942,11 @@ body {
       height: auto; }
   .brands__button {
     display: inline-block;
-    margin: 8px 0 32px 48px; } }
+    margin: 8px 0 32px 24px; } }
 
 @media (min-width: 1120px) {
   .brands__button {
-    margin: 8px 0 50px 56px; } }
+    margin: 8px 0 50px 32px; } }
 
 .types__swiper::after {
   content: '';
@@ -979,11 +980,11 @@ body {
       height: auto; }
   .types__button {
     display: inline-block;
-    margin: 8px 0 32px 48px; } }
+    margin: 8px 0 32px 24px; } }
 
 @media (min-width: 1120px) {
   .types__button {
-    margin: 8px 0 50px 56px; } }
+    margin: 8px 0 50px 32px; } }
 
 .prices__swiper::after {
   content: '';
@@ -1122,8 +1123,13 @@ body {
     padding-left: 0.5em; } }
 
 @media (min-width: 1120px) {
+  .prices__swiper {
+    padding: 0 32px; }
   .prices__explain {
-    margin-top: 32px; } }
+    margin-top: 32px;
+    margin-left: 32px; }
+  .prices__button {
+    margin-left: 24px; } }
 
 .footer {
   padding: 0 16px 3px 16px;
@@ -1149,7 +1155,7 @@ body {
 
 @media (min-width: 768px) {
   .footer {
-    padding: 0 24px 3px 24px; }
+    padding: 0 24px 9px 24px; }
     .footer__items {
       width: auto;
       flex-direction: row;
@@ -1160,6 +1166,10 @@ body {
         text-align: left; }
       .footer__item:last-of-type {
         text-align: right; } }
+
+@media (min-width: 1120px) {
+  .footer {
+    padding: 0 32px 5px 32px; } }
 
 .modal {
   position: absolute;

@@ -6,7 +6,6 @@
 	background: $button no-repeat 50% 50%;
 	padding: 0;
 	cursor: pointer;
-	&:focus,
 	&:hover {
 		filter: drop-shadow(0px 0px 8px #FF3E79);
 		transition-duration: 1s;
@@ -35,7 +34,6 @@
 		padding: 0.5em;
 		padding-left: 33px;
 		text-align: left;
-		&:focus,
 		&:hover {
 			@include slide-border;
 		}

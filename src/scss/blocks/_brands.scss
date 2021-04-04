@@ -15,7 +15,7 @@
 		}
 		&__button {
 			display: inline-block;
-			margin: 8px 0 32px 48px;
+			margin: 8px 0 32px 24px;
 		}
 	}
 }
@@ -24,7 +24,7 @@
 @media (min-width: $desktop) {
 	.brands {
 		&__button {
-			margin: 8px 0 50px 56px;
+			margin: 8px 0 50px 32px;
 		}
 	}
 }

@@ -163,8 +163,15 @@
 
 @media (min-width: $desktop) {
 	.prices {
+		&__swiper {
+			padding: 0 32px;
+		}
 		&__explain {
 			margin-top: 32px;
+			margin-left: 32px;
+		}
+		&__button {
+			margin-left: 24px;
 		}
 	}
 }

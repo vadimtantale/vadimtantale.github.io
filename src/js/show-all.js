@@ -11,7 +11,6 @@ function activateButton(button) {
 }
 
 function chooseAction(button) {
-	// const attr = button.dataset.section;
 	const attr = button.getAttribute('data-section');
 	const item = document.querySelector(`.${attr}__items`);
 
@@ -20,10 +19,6 @@ function chooseAction(button) {
 	if (item.classList.contains(`${attr}__items--visible`)) {
 		button.textContent = 'Скрыть';
 	} else {
-		if (attr == 'about') {
-			button.textContent = 'Читать далее';
-		} else {
-			button.textContent = 'Показать всё';
-		}
+		button.textContent = (attr === 'about') ? 'Читать далее' : 'Показать всё';
 	}
 }

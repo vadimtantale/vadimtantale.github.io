@@ -27,12 +27,12 @@ document.addEventListener('click', (event) => {
 		wrapper.classList.remove('wrapper--disactive');
 		deleteActiveClass(modals);
 	}
-
 });
 
 function deleteActiveClass(lists) {
 	for (let elem of lists) {
 		const modal = elem.getAttribute('data-name');
+		
 		if (elem.classList.contains(`${modal}--active`)) {
 			elem.classList.remove(`${modal}--active`);
 		}

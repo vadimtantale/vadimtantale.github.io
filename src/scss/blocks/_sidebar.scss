@@ -9,7 +9,7 @@
 	transition: transform 1s ease;
 	z-index: 4;
 	padding: 18px 16px 24px 16px;
-	overflow: auto;
+	overflow: scroll;
 	scrollbar-width: none;
 	&::-webkit-scrollbar {
 		display:none;
